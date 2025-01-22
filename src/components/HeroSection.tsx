@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Spotlight } from "./ui/Sportlight";
-import { Button } from "./ui/moving-border";
 
 const HeroSection = () => {
   return (
@@ -18,14 +17,10 @@ const HeroSection = () => {
           field of Music.
         </p>
         <div className="mt-4">
-          <Link href={"/courses"}>
-            <Button
-              borderRadius="1.75rem"
-              className="bg-black text-white font-semibold text-base  shadow-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              Explore Courses
-            </Button>
-          </Link>
+          <Link
+            className="bg-black text-white font-semibold text-base  shadow-md hover:bg-gray-800 hover:scale-105 transition-transform duration-300 ease-in-out"
+            href={"/courses"}
+          ></Link>
         </div>
       </div>
     </div>

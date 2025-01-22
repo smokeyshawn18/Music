@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
+// Define the transition object for animation
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -14,6 +15,7 @@ const transition = {
   restSpeed: 0.001,
 };
 
+// Menu Component
 export const Menu = ({
   setActive,
   children,
@@ -36,6 +38,7 @@ export const Menu = ({
   );
 };
 
+// MenuItem Component
 export const MenuItem = ({
   setActive,
   active,
@@ -85,6 +88,7 @@ export const MenuItem = ({
   );
 };
 
+// ProductItem Component
 export const ProductItem = ({
   title,
   description,
@@ -123,12 +127,9 @@ export const HoveredLink = ({
   className,
   onClick,
   ...rest
-}: {
+}: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
   href: string;
-  className?: string;
-  onClick?: () => void;
-  [key: string]: any;
 }) => {
   return (
     <Link

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
-import { div } from "framer-motion/client";
 
 const musicSchoolContent = [
   {
@@ -37,11 +36,7 @@ const musicSchoolContent = [
 ];
 
 const WhyChooseUs = () => {
-  return (
-    <div>
-      <StickyScroll content={musicSchoolContent} />
-    </div>
-  );
+  return <StickyScroll content={musicSchoolContent} />;
 };
 
 export default WhyChooseUs;
