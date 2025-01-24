@@ -62,7 +62,7 @@ const Navbar = ({ className }: { className?: string }) => {
               >
                 <div className="flex flex-col space-y-4 text-sm">
                   <HoveredLink href="/courses" onClick={closeMenu}>
-                    All Courses
+                    Our All Courses
                   </HoveredLink>
                   <HoveredLink href="/courses/music-theory" onClick={closeMenu}>
                     Basic Music Theory
