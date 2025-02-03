@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { HoverEffect } from "./ui/card-hover-effect";
 
 const UpcomingWebinars = () => {
   const featuredWebinars = [
@@ -61,15 +60,29 @@ const UpcomingWebinars = () => {
               Enhance Your Musical Journey
             </p>
           </div>
-          <div className="mt-10">
-            <HoverEffect
-              items={featuredWebinars.map((webinar) => ({
-                key: webinar.slug, // Ensure 'slug' is unique for the key
-                title: webinar.title,
-                description: webinar.description,
-                link: `/webinars/${webinar.slug}`, // Dynamic link to each webinar
-              }))}
-            />
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredWebinars.map((webinar) => (
+              <div
+                key={webinar.slug}
+                className="group relative bg-white rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 group-hover:text-teal-400">
+                    {webinar.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600">{webinar.description}</p>
+                </div>
+                <div className="absolute inset-0 bg-teal-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-xl"></div>
+                <div className="absolute bottom-4 left-6 text-white font-semibold">
+                  <Link
+                    href={`/webinars/${webinar.slug}`}
+                    className="bg-white text-teal-400 px-4 py-2 rounded-full shadow-lg hover:bg-teal-200 transition duration-300"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="mt-10 text-center">
             <Link
