@@ -58,8 +58,8 @@ const Testimonial = () => {
       <div className="relative mt-10 w-full flex items-center justify-center overflow-hidden z-10">
         <InfiniteMovingCards
           items={musicSchoolTestimonials}
-          direction="right"
-          speed="normal"
+          direction="left"
+          speed="slow"
         />
       </div>
     </BackgroundLines>
