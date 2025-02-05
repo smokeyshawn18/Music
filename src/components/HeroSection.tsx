@@ -1,10 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Spotlight } from "./ui/Sportlight";
 import { BackgroundLines } from "./ui/background-lines";
 
 const HeroSection = () => {
   return (
-    <BackgroundLines className="h-auto md:h-[40em] w-full rounded-lg flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
+    <BackgroundLines className="bg-black h-auto md:h-[40em] w-full rounded-lg flex flex-col items-center justify-center relative overflow-hidden mx-auto py-10 md:py-0">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
