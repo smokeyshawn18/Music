@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { WavyBackground } from "./ui/wavy-background";
+
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
 const Instructors = () => {
@@ -51,7 +51,7 @@ const Instructors = () => {
   ];
   return (
     <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
-      <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full ">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full ">
         <h2 className="text-3xl font-bold md:text-4xl lg:text-7xl mb-10 tracking-wide">
           Meet Our Instructors
         </h2>
@@ -62,7 +62,7 @@ const Instructors = () => {
         <div className="flex flex-row items-center justify-center mb-10 w-full mt-10">
           <AnimatedTooltip items={people}></AnimatedTooltip>
         </div>
-      </WavyBackground>
+      </div>
     </div>
   );
 };
